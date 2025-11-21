@@ -7,9 +7,10 @@
     "dev": "npm-run-all --parallel dev:*",
     "dev:client": "cd client && npm run dev",
     "dev:server": "cd server && npm run dev",
-    "postinstall": "npm-run-all --parallel install:*",
+    "postinstall": "npm-run-all --parallel install:* && npm run seed",
     "install:client": "cd client && npm install",
     "install:server": "cd server && npm install",
+    "seed": "cd server && npm run seed:db admin@example.com admin123",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
